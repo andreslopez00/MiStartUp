@@ -1,0 +1,51 @@
+:root {
+    --color-principal: #28a745; /* Verde */
+    --color-secundario: #212529; /* Negro */
+    --color-terciario: #6c757d; /* Gris */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-terciario);
+    color: var(--color-secundario);
+}
+
+.navbar {
+    background-color: var(--color-secundario) !important;
+}
+
+.hero {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+.btn-primary {
+    background-color: var(--color-principal);
+    border-color: var(--color-principal);
+}
+
+.btn-primary:hover {
+    background-color: #218838; /* Un verde más oscuro */
+}
+
+footer {
+    background-color: var(--color-secundario);
+    color: white;
+}
+.card {
+    text-align: center; /* Centrar el contenido de las tarjetas */
+}
+
+.card img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ajustar el tamaño */
+    height: auto;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
