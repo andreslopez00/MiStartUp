@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras - Learn to Train</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- Logo y nombre en el navbar -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="img/logo.png" alt="Logo" class="navbar-logo">
+                <span class="navbar-title">Learn to Train</span>
+            </a>
+            <!-- Menú de navegación -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="articulos.html">Artículos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculadoras.html">Calculadoras</a></li>
+                    <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="comunidad.html">Comunidad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="container text-center my-5">
+        <h1>Calculadoras y Herramientas</h1>
+        <p>Utiliza estas herramientas para mejorar tu entrenamiento y nutrición.</p>
+    </header>
+
+    <!-- Calculadora de Macros -->
+    <section class="container my-5">
+        <h2 class="text-center">Calculadora de Macros</h2>
+        <form id="macrosForm">
+            <div class="mb-3">
+                <label for="peso" class="form-label">Peso (kg)</label>
+                <input type="number" class="form-control" id="peso" required>
+            </div>
+            <div class="mb-3">
+                <label for="objetivo" class="form-label">Objetivo</label>
+                <select class="form-control" id="objetivo">
+                    <option value="volumen">Volumen</option>
+                    <option value="definicion">Definición</option>
+                    <option value="mantenimiento">Mantenimiento</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-success" onclick="calcularMacros()">Calcular</button>
+        </form>
+        <div id="resultadoMacros" class="mt-3"></div>
+    </section>
+
+    <!-- Calculadora de 1RM -->
+    <section class="container my-5">
+        <h2 class="text-center">Calculadora de 1RM</h2>
+        <form id="rmForm">
+            <div class="mb-3">
+                <label for="pesoLevantado" class="form-label">Peso levantado (kg)</label>
+                <input type="number" class="form-control" id="pesoLevantado" required>
+            </div>
+            <div class="mb-3">
+                <label for="repeticiones" class="form-label">Repeticiones</label>
+                <input type="number" class="form-control" id="repeticiones" required>
+            </div>
+            <button type="button" class="btn btn-success" onclick="calcular1RM()">Calcular</button>
+        </form>
+        <div id="resultadoRM" class="mt-3"></div>
+    </section>
+
+    <!-- Seguimiento de Progreso -->
+    <section class="container my-5">
+        <h2 class="text-center">Seguimiento de Progreso</h2>
+        <form id="seguimientoForm">
+            <div class="mb-3">
+                <label for="pesoActual" class="form-label">Peso actual (kg)</label>
+                <input type="number" class="form-control" id="pesoActual" required>
+            </div>
+            <div class="mb-3">
+                <label for="medidas" class="form-label">Medidas (cm)</label>
+                <input type="text" class="form-control" id="medidas" placeholder="Ejemplo: Biceps - 40cm, Pecho - 100cm">
+            </div>
+            <button type="button" class="btn btn-success" onclick="guardarProgreso()">Guardar</button>
+        </form>
+        <div id="registroProgreso" class="mt-3"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Learn to Train - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

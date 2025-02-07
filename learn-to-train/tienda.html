@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Learn to Train</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+            <img src="img/logo.png" alt="Logo" class="navbar-logo">
+            <span class="navbar-title">Learn to Train</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="articulos.html">Artículos</a></li>
+                <li class="nav-item"><a class="nav-link" href="calculadoras.html">Calculadoras</a></li>
+                <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
+                <li class="nav-item"><a class="nav-link" href="comunidad.html">Comunidad</a></li>
+                <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="cart-icon" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="bi bi-cart-fill"></i> <span id="cart-count" class="badge bg-danger">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Modal del Carrito -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="cart-items" class="list-group">
+                    <!-- Los productos del carrito se agregarán aquí dinámicamente -->
+                </ul>
+                <div class="mt-3">
+                    <strong>Total: $<span id="cart-total">0.00</span></strong>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="checkout-btn">Pagar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Tienda -->
+    <section id="tienda" class="container my-5">
+        <h2 class="text-center">Tienda</h2>
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/12semanas.jpg" class="card-img-top" alt="Programa de Entrenamiento">
+                    <div class="card-body">
+                        <h5 class="card-title">Programa de 12 Semanas</h5>
+                        <p class="card-text">Maximiza tu crecimiento muscular con nuestro plan probado.</p>
+                        <button class="btn btn-success">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/dieta.jpg" class="card-img-top" alt="Plan de Dieta Personalizado">
+                    <div class="card-body">
+                        <h5 class="card-title">Plan de Dieta Personalizado</h5>
+                        <p class="card-text">Optimiza tu nutrición con un plan ajustado a tus necesidades personales.</p>
+                        <button class="btn btn-success">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/suplementos.webp" class="card-img-top" alt="Suplementos para Hipertrofia">
+                    <div class="card-body">
+                        <h5 class="card-title">Suplementos para Hipertrofia</h5>
+                        <p class="card-text">Aumenta tu rendimiento con los suplementos ideales para el crecimiento muscular.</p>
+                        <button class="btn btn-success">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/material.jpg" class="card-img-top" alt="Equipos de Entrenamiento">
+                    <div class="card-body">
+                        <h5 class="card-title">Equipos de Entrenamiento</h5>
+                        <p class="card-text">Encuentra el equipo ideal para potenciar tus entrenamientos en casa o en el gimnasio.</p>
+                        <button class="btn btn-success">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/clases.jpg" class="card-img-top" alt="Clases Virtuales de Entrenamiento">
+                    <div class="card-body">
+                        <h5 class="card-title">Clases Virtuales de Entrenamiento</h5>
+                        <p class="card-text">Accede a clases personalizadas con entrenadores expertos, desde la comodidad de tu hogar.</p>
+                        <button class="btn btn-success">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/ropa.jpg" class="card-img-top" alt="Ropa de Entrenamiento">
+                    <div class="card-body">
+                        <h5 class="card-title">Ropa de Entrenamiento</h5>
+                        <p class="card-text">Vístete con estilo y comodidad durante tus entrenamientos.</p>
+                        <button class="btn btn-success">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Learn to Train - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
