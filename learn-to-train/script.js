@@ -75,7 +75,18 @@ function updateCart() {
 
 // Función para agregar productos al carrito
 function addToCart(productName, productPrice) {
-    cart.push({ name: productName, price: productPrice });
+    // Verifica si el producto ya está en el carrito
+    const existingProduct = cart.find(item => item.name === productName);
+
+    if (existingProduct) {
+        // Si el producto ya está en el carrito, solo actualiza el precio y la cantidad
+        existingProduct.quantity++;
+        existingProduct.totalPrice += productPrice;
+    } else {
+        // Si el producto no está en el carrito, agrégalo
+        cart.push({ name: productName, price: productPrice, quantity: 1, totalPrice: productPrice });
+    }
+
     cartCount++;
     cartTotal += productPrice;
     updateCart();

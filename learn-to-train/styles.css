@@ -69,7 +69,29 @@ html, body {
     color: white;
     position: relative;
 }
+.hero.hero-articulos {
+    background: url('img/fondo-articulos.jpg') center center / cover no-repeat;
+}
 
+/* Fondo específico para la página de calculadoras */
+.hero.hero-calculadoras {
+    background: url('img/fondo-calculadora.webp') center center / cover no-repeat;
+}
+
+/* Fondo específico para la página de videos */
+.hero.hero-videos {
+    background: url('img/fondo-videos.webp') center center / cover no-repeat;
+}
+
+/* Fondo específico para la página de comunidad */
+.hero.hero-comunidad {
+    background: url('img/fondo-comunidad.jpg') center center / cover no-repeat;
+}
+
+/* Fondo específico para la página de tienda */
+.hero.hero-tienda {
+    background: url('img/fondo-tienda.jpg') center center / cover no-repeat;
+}
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -137,6 +159,32 @@ section h2 {
     top: -5px;
     right: -5px;
     font-size: 0.75rem;
+}
+/* Estilos para las cards */
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;  /* Espacio entre las tarjetas */
+    justify-content: space-around;  /* Alinea las tarjetas de manera distribuida */
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido esté alineado verticalmente */
+    justify-content: space-between; /* Alinea el contenido al mismo nivel */
+    height: 100%;  /* Esto hace que todas las tarjetas tengan la misma altura */
+}
+
+/* Establecer una altura mínima para que las tarjetas no se deformen si el contenido es pequeño */
+.card-body {
+    flex-grow: 1;  /* Esto hace que el contenido ocupe todo el espacio disponible */
+}
+
+/* Si quieres que todas las tarjetas tengan la misma altura máxima sin que sobresalgan */
+.card img {
+    object-fit: cover;  /* Asegura que la imagen se ajuste bien a la tarjeta */
+    height: 200px; /* Ajusta según el tamaño deseado */
+    width: 100%;
 }
 
 /* Footer mejorado */
