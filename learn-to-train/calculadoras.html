@@ -42,60 +42,80 @@
     </header>
     
 
-    <!-- Calculadora de Macros -->
     <section class="container my-5">
-        <h2 class="text-center">Calculadora de Macros</h2>
-        <form id="macrosForm">
-            <div class="mb-3">
-                <label for="peso" class="form-label">Peso (kg)</label>
-                <input type="number" class="form-control" id="peso" required>
+        <h2 class="text-center">Calculadoras de Entrenamiento</h2>
+    
+        <div class="row">
+            <!-- Calculadora de Macros -->
+            <div class="col-md-4">
+                <div class="card shadow-lg p-4">
+                    <h3 class="text-center"><i class="fas fa-utensils"></i> Calculadora de Macros</h3>
+                    <form id="macrosForm">
+                        <div class="mb-3">
+                            <label for="peso" class="form-label">Peso (kg)</label>
+                            <input type="number" class="form-control" id="peso" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="objetivo" class="form-label">Objetivo</label>
+                            <select class="form-control" id="objetivo">
+                                <option value="volumen">Volumen</option>
+                                <option value="definicion">Definición</option>
+                                <option value="mantenimiento">Mantenimiento</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-lg w-100 mt-3" onclick="calcularMacros()">
+                            <i class="fas fa-calculator"></i> Calcular
+                        </button>
+                    </form>
+                    <div id="resultadoMacros" class="mt-3 text-center"></div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="objetivo" class="form-label">Objetivo</label>
-                <select class="form-control" id="objetivo">
-                    <option value="volumen">Volumen</option>
-                    <option value="definicion">Definición</option>
-                    <option value="mantenimiento">Mantenimiento</option>
-                </select>
+    
+            <!-- Calculadora de 1RM -->
+            <div class="col-md-4">
+                <div class="card shadow-lg p-4">
+                    <h3 class="text-center"><i class="fas fa-dumbbell"></i> Calculadora de 1RM</h3>
+                    <form id="rmForm">
+                        <div class="mb-3">
+                            <label for="pesoLevantado" class="form-label">Peso levantado (kg)</label>
+                            <input type="number" class="form-control" id="pesoLevantado" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="repeticiones" class="form-label">Repeticiones</label>
+                            <input type="number" class="form-control" id="repeticiones" required>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-lg w-100 mt-3" onclick="calcular1RM()">
+                            <i class="fas fa-dumbbell"></i> Calcular
+                        </button>
+                    </form>
+                    <div id="resultadoRM" class="mt-3 text-center"></div>
+                </div>
             </div>
-            <button type="button" class="btn btn-success" onclick="calcularMacros()">Calcular</button>
-        </form>
-        <div id="resultadoMacros" class="mt-3"></div>
+    
+            <!-- Seguimiento de Progreso -->
+            <div class="col-md-4">
+                <div class="card shadow-lg p-4">
+                    <h3 class="text-center"><i class="fas fa-chart-line"></i> Seguimiento de Progreso</h3>
+                    <form id="seguimientoForm">
+                        <div class="mb-3">
+                            <label for="pesoActual" class="form-label">Peso actual (kg)</label>
+                            <input type="number" class="form-control" id="pesoActual" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="medidas" class="form-label">Medidas (cm)</label>
+                            <input type="text" class="form-control" id="medidas" placeholder="Ej: Biceps - 40cm, Pecho - 100cm">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-lg w-100 mt-3" onclick="guardarProgreso()">
+                            <i class="fas fa-save"></i> Guardar
+                        </button>
+                    </form>
+                    <div id="registroProgreso" class="mt-3 text-center"></div>
+                </div>
+            </div>
+        </div>
     </section>
+    
 
-    <!-- Calculadora de 1RM -->
-    <section class="container my-5">
-        <h2 class="text-center">Calculadora de 1RM</h2>
-        <form id="rmForm">
-            <div class="mb-3">
-                <label for="pesoLevantado" class="form-label">Peso levantado (kg)</label>
-                <input type="number" class="form-control" id="pesoLevantado" required>
-            </div>
-            <div class="mb-3">
-                <label for="repeticiones" class="form-label">Repeticiones</label>
-                <input type="number" class="form-control" id="repeticiones" required>
-            </div>
-            <button type="button" class="btn btn-success" onclick="calcular1RM()">Calcular</button>
-        </form>
-        <div id="resultadoRM" class="mt-3"></div>
-    </section>
-
-    <!-- Seguimiento de Progreso -->
-    <section class="container my-5">
-        <h2 class="text-center">Seguimiento de Progreso</h2>
-        <form id="seguimientoForm">
-            <div class="mb-3">
-                <label for="pesoActual" class="form-label">Peso actual (kg)</label>
-                <input type="number" class="form-control" id="pesoActual" required>
-            </div>
-            <div class="mb-3">
-                <label for="medidas" class="form-label">Medidas (cm)</label>
-                <input type="text" class="form-control" id="medidas" placeholder="Ejemplo: Biceps - 40cm, Pecho - 100cm">
-            </div>
-            <button type="button" class="btn btn-success" onclick="guardarProgreso()">Guardar</button>
-        </form>
-        <div id="registroProgreso" class="mt-3"></div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-5">

@@ -128,17 +128,70 @@ section h2 {
     margin-bottom: 1rem;
 }
 
-/* Cards mejoradas */
+/* ------------------ ESTILOS MEJORADOS PARA LAS CALCULADORAS ------------------ */
+
 .card {
+    border-radius: 15px;
     border: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
+/* Títulos con iconos */
+.card h3 {
+    font-weight: bold;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card h3 i {
+    margin-right: 10px;
+    color: var(--color-principal);
+}
+
+/* Campos de entrada */
+.form-control {
+    border-radius: 10px;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+/* Botón de calcular */
+.btn-primary {
+    background: var(--color-principal);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 10px;
+}
+
+.btn-primary:hover {
+    background: var(--color-hover);
+    transform: scale(1.05);
+}
+
+/* Espaciado para resultados */
+#resultadoMacros, #resultadoRM, #registroProgreso {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 2rem;
+    }
+}
+
 
 .card-body {
     padding: 1.5rem;
