@@ -10,14 +10,13 @@
 </head>
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <!-- Logo y nombre en el navbar -->
             <a href="index.html" class="navbar-brand d-flex align-items-center">
                 <img src="img/logo.png" alt="Logo" class="navbar-logo">
                 <span class="navbar-title">Learn to Train</span>
             </a>
-            <!-- Menú de navegación -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,76 +25,84 @@
                     <li class="nav-item"><a class="nav-link" href="articulos.html">Artículos</a></li>
                     <li class="nav-item"><a class="nav-link" href="calculadoras.html">Calculadoras</a></li>
                     <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="comunidad.html">Comunidad</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="comunidad.html">Comunidad</a></li>
                     <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Hero de la Comunidad -->
     <header class="hero hero-comunidad text-white text-center py-5">
         <div class="container">
             <h1 class="display-4 fw-bold">Comunidad de Entrenamiento</h1>
-            <p class="lead mb-4">Únete a nuestra comunidad para compartir experiencias y mejorar juntos.</p>
+            <p class="lead">Comparte tu progreso y crece con otros apasionados del fitness.</p>
             <a href="index.html" class="btn btn-light btn-lg shadow-lg">Volver al inicio</a>
         </div>
     </header>
-    
-    <!-- Sección Comunidad -->
-    <section id="comunidad" class="bg-light py-5 text-center">
+
+    <!-- Sección Comunidad Mejorada -->
+    <section id="comunidad" class="py-5 text-center bg-light">
         <div class="container">
-            <h2>Únete a la Comunidad</h2>
-            <p>Comparte tu progreso y aprende con otros apasionados del fitness.</p>
-            <button class="btn btn-primary">Unirse</button>
+            <h2 class="fw-bold">Únete a la Comunidad</h2>
+            <p>Forma parte de una red de entrenadores y deportistas.</p>
+            <button class="btn btn-lg btn-join">Unirse <i class="fas fa-users"></i></button>
+            
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="img/ramon.webp" class="card-img-top" alt="Miembro">
+                        <div class="card-body">
+                            <h5 class="card-title">Ramon Dino</h5>
+                            <p class="card-text">"Desde que me uní, mi motivación ha crecido mucho. Recomiendo esta comunidad."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="img/jorge.jpg" class="card-img-top" alt="Miembro">
+                        <div class="card-body">
+                            <h5 class="card-title">Jorge Tabet</h5>
+                            <p class="card-text">"Aquí he encontrado apoyo y consejos que realmente han hecho la diferencia."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="img/andoni.jpg" class="card-img-top" alt="Miembro">
+                        <div class="card-body">
+                            <h5 class="card-title">Andoni</h5>
+                            <p class="card-text">"Una comunidad increíble para aprender y compartir experiencias."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Foro -->
+    <!-- Foro Mejorado -->
     <section class="container my-5">
-        <h2 class="text-center">Foro de Discusión</h2>
-        <div id="foro">
-            <div class="mb-3">
+        <h2 class="text-center fw-bold">Foro de Discusión</h2>
+        <div id="foro" class="shadow-sm p-4 bg-white rounded">
+            <div class="mb-3 d-flex align-items-center">
+                <img src="img/avatar.png" class="avatar me-2" alt="Avatar">
                 <textarea id="mensajeForo" class="form-control" placeholder="Escribe tu mensaje..."></textarea>
             </div>
-            <button class="btn btn-success" onclick="publicarMensaje()">Publicar</button>
-            <div id="mensajesPublicados" class="mt-4"></div>
+            <button class="btn btn-success btn-publicar">Publicar <i class="fas fa-paper-plane"></i></button>
+            <div id="mensajesPublicados" class="mt-4">
+                <!-- Aquí se insertarán los mensajes -->
+            </div>
         </div>
     </section>
+
+    <!-- Botón flotante de publicar -->
+    <button class="btn btn-primary btn-flotante"><i class="fas fa-pencil-alt"></i></button>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-5">
-        <div class="container">
-            <!-- Datos de contacto -->
-            <div class="row mb-4">
-                <div class="col-md-4">
-                    <h5>Contacto</h5>
-                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Rinconada, 32</p>
-                    <p><i class="fas fa-phone-alt"></i> Teléfono: 634239543</p>
-                    <p><i class="fas fa-envelope"></i> Email: contacto@learntotrain.com</p>
-                </div>
-    
-                <!-- Redes sociales -->
-                <div class="col-md-4">
-                    <h5>Síguenos</h5>
-                    <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-    
-                <!-- Enlaces adicionales -->
-                <div class="col-md-4">
-                    <h5>Enlaces</h5>
-                    <p><a href="privacy-policy.html" class="text-white">Política de privacidad</a></p>
-                    <p><a href="terms-of-service.html" class="text-white">Términos de servicio</a></p>
-                </div>
-            </div>
-    
-            <!-- Copyright -->
-            <p>&copy; 2025 Learn to Train - Todos los derechos reservados.</p>
-        </div>
+        <p>&copy; 2025 Learn to Train - Todos los derechos reservados.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
