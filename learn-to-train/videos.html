@@ -10,14 +10,13 @@
 </head>
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <!-- Logo y nombre en el navbar -->
             <a href="index.html" class="navbar-brand d-flex align-items-center">
                 <img src="img/logo.png" alt="Logo" class="navbar-logo">
                 <span class="navbar-title">Learn to Train</span>
             </a>
-            <!-- Menú de navegación -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,86 +24,93 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="articulos.html">Artículos</a></li>
                     <li class="nav-item"><a class="nav-link" href="calculadoras.html">Calculadoras</a></li>
-                    <li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="videos.html">Videos</a></li>
                     <li class="nav-item"><a class="nav-link" href="comunidad.html">Comunidad</a></li>
                     <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Hero de Videos -->
     <header class="hero hero-videos text-white text-center py-5">
         <div class="container">
             <h1 class="display-4 fw-bold">Videos y Rutinas</h1>
-            <p class="lead mb-4">Mira nuestras rutinas y aprende nuevas técnicas de entrenamiento en video.</p>
+            <p class="lead">Aprende nuevas técnicas de entrenamiento con nuestros videos.</p>
             <a href="index.html" class="btn btn-light btn-lg shadow-lg">Volver al inicio</a>
         </div>
     </header>
     
     <!-- Sección de Videos -->
     <section id="videos" class="container my-5">
-        <h2 class="text-center">Videos y Rutinas</h2>
-        <p class="text-center">Descubre nuestras rutinas y consejos en video.</p>
+        <h2 class="text-center fw-bold">Rutinas y Consejos en Video</h2>
+        <p class="text-center">Descubre nuestras rutinas, técnicas avanzadas y consejos de nutrición.</p>
         
-        <!-- Primer fila de videos -->
         <div class="row">
-            <div class="col-md-6 text-center">
-                <h4>Rutina de Hipertrofia</h4>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/DjfnFj-50b4?si=bemo6_QSkBYXcTXp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- Video 1 -->
+            <div class="col-md-6">
+                <div class="card video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/DjfnFj-50b4?si=bemo6_QSkBYXcTXp" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Rutina de Hipertrofia</h5>
+                        <p class="card-text">Una rutina completa para ganar masa muscular de forma efectiva.</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 text-center">
-                <h4>Técnicas avanzadas</h4>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/qwx5YkQtmN0?si=jJS2XBHpDOY-JIoD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <!-- Video 2 -->
+            <div class="col-md-6">
+                <div class="card video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/qwx5YkQtmN0?si=jJS2XBHpDOY-JIoD" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Técnicas Avanzadas</h5>
+                        <p class="card-text">Aprende ejercicios avanzados para mejorar tu entrenamiento.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Segunda fila de videos -->
-        <div class="row mt-5">
-            <div class="col-md-6 text-center">
-                <h4>Nutrición para Ganancia Muscular</h4>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/h1in5WPcxXI?si=2rHLgkX-XIwzkZaL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="row mt-4">
+            <!-- Video 3 -->
+            <div class="col-md-6">
+                <div class="card video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/h1in5WPcxXI?si=2rHLgkX-XIwzkZaL" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Nutrición para Ganancia Muscular</h5>
+                        <p class="card-text">Consejos de nutrición para maximizar tu progreso en el gimnasio.</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 text-center">
-                <h4>Ejercicios para Piernas</h4>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/H3QfYAGnl5E?si=hAJvBdgAOLbW9vwG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <!-- Video 4 -->
+            <div class="col-md-6">
+                <div class="card video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/H3QfYAGnl5E?si=hAJvBdgAOLbW9vwG" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Ejercicios para Piernas</h5>
+                        <p class="card-text">Rutina efectiva para fortalecer y definir las piernas.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Botón flotante para sugerir videos -->
+    <button class="btn btn-primary btn-flotante"><i class="fas fa-plus"></i> Sugerir Video</button>
+
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-5">
-        <div class="container">
-            <!-- Datos de contacto -->
-            <div class="row mb-4">
-                <div class="col-md-4">
-                    <h5>Contacto</h5>
-                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Rinconada, 32</p>
-                    <p><i class="fas fa-phone-alt"></i> Teléfono: 634239543</p>
-                    <p><i class="fas fa-envelope"></i> Email: contacto@learntotrain.com</p>
-                </div>
-    
-                <!-- Redes sociales -->
-                <div class="col-md-4">
-                    <h5>Síguenos</h5>
-                    <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-    
-                <!-- Enlaces adicionales -->
-                <div class="col-md-4">
-                    <h5>Enlaces</h5>
-                    <p><a href="privacy-policy.html" class="text-white">Política de privacidad</a></p>
-                    <p><a href="terms-of-service.html" class="text-white">Términos de servicio</a></p>
-                </div>
-            </div>
-    
-            <!-- Copyright -->
-            <p>&copy; 2025 Learn to Train - Todos los derechos reservados.</p>
-        </div>
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2025 Learn to Train - Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

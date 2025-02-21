@@ -60,6 +60,58 @@ html, body {
 .nav-link:hover {
     color: var(--color-principal);
 }
+/* Hero de videos */
+.hero-videos {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/hero-videos.jpg') center/cover;
+    color: white;
+}
+
+/* Tarjetas de videos */
+.video-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-card:hover {
+    transform: scale(1.03);
+}
+
+/* Contenedor del video responsivo */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Botón flotante */
+.btn-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-flotante:hover {
+    background-color: #218838;
+}
 
 /* Hero section mejorado */
 .hero {
